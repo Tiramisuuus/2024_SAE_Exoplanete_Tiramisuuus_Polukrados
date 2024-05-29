@@ -8,16 +8,16 @@ public class ManipImage {
 
     }
 
-    public void sauvegarderImage(String path){
+    public void sauvegarderImage(String nomFichier){
         try{
-            String chemin = "src/assets/" + path;
+            String nomFichier1 =  nomFichier.substring(0,nomFichier.lastIndexOf("."));
+            System.out.println(nomFichier1);
+            String chemin = "src/assets/" + nomFichier;
             File inputfile = new File(chemin);
             BufferedImage img1 = ImageIO.read(inputfile);
-            File outputfile = new File("src/assets/" + path +"copie.png");
-
+            File outputfile = new File("src/assets/" + nomFichier1 +"_copie.png");
             ImageIO.write(img1, "png", outputfile);
 
-            System.out.println("Image sauvegardée");
         }catch(Exception e){
             System.out.println("Erreur lors de la sauvegarde de l'image");
         }
