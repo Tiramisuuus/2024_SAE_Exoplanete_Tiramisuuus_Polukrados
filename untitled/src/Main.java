@@ -6,7 +6,13 @@ public class Main {
         //ChargeImage imageProcessor = new ChargeImage();
         //imageProcessor.processImage("R.png");
 
-        ImageNoirEtBlanc imageNoirEtBlanc = new ImageNoirEtBlanc();
-        imageNoirEtBlanc.processImage("R.png");
+        //ImageNoirEtBlanc imageNoirEtBlanc = new ImageNoirEtBlanc();
+        //imageNoirEtBlanc.processImage("R.png");
+
+        //ImageRouge imageRouge = new ImageRouge();
+        //imageRouge.processImage("R.png");
+
+        ImageVertBleu imageVertBleu = new ImageVertBleu();
+        imageVertBleu.processImage("R.png");
     }
 }
