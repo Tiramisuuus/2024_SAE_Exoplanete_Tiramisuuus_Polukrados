@@ -5,9 +5,10 @@ import java.io.IOException;
 
 public class ChargeImage {
 
-    public void processImage(String path) {
+    public void processImage(String nomFichier) {
         try {
-            String chemin = "src/assets/" + path;
+            String nomFichier1 = nomFichier.substring(0, nomFichier.lastIndexOf("."));
+            String chemin = "src/assets/" + nomFichier;
             File inputfile = new File(chemin);
             BufferedImage originalImage = ImageIO.read(inputfile);
 
@@ -20,7 +21,7 @@ public class ChargeImage {
                 }
             }
 
-            File outputfile = new File("src/assets/" + path + "_copiePixel.png");
+            File outputfile = new File("src/assets/" + nomFichier1 + "_copiePixel.png");
             ImageIO.write(newImage, "png", outputfile);
 
             System.out.println("Image sauvegardée");

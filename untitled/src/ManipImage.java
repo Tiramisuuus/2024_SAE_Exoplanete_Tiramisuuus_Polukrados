@@ -12,7 +12,6 @@ public class ManipImage {
     public void sauvegarderImage(String nomFichier) {
         try {
             String nomFichier1 = nomFichier.substring(0, nomFichier.lastIndexOf("."));
-            System.out.println(nomFichier1);
             String chemin = "src/assets/" + nomFichier;
             File inputfile = new File(chemin);
             BufferedImage img1 = ImageIO.read(inputfile);
