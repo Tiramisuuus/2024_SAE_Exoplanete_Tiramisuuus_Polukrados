@@ -1,3 +1,5 @@
+import java.awt.*;
+
 public class Main {
     public static void main(String[] args) {
         //ManipImage manipImage = new ManipImage();
@@ -12,7 +14,13 @@ public class Main {
         //ImageRouge imageRouge = new ImageRouge();
         //imageRouge.processImage("R.png");
 
-        ImageVertBleu imageVertBleu = new ImageVertBleu();
-        imageVertBleu.processImage("R.png");
+        //ImageVertBleu imageVertBleu = new ImageVertBleu();
+        //imageVertBleu.processImage("R.png");
+
+        Color[] colors = {Color.GREEN, Color.YELLOW, Color.RED, Color.BLUE, Color.ORANGE};
+        Palette palette = new Palette(colors);
+
+        CouleurComparaison imageColorComparaison = new CouleurComparaison();
+        imageColorComparaison.compareColors("R.png", palette);
     }
 }
