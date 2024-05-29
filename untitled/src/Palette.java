@@ -7,14 +7,12 @@ public class Palette {
         this.colors = colors;
     }
 
-    public Color getPlusProche(Color color) {
+    public Color getPlusProche(Color color, NormeCouleurs norme) {
         Color closestColor = null;
         double minDistance = Double.MAX_VALUE;
 
         for (Color c : colors) {
-            double distance = Math.pow(color.getRed() - c.getRed(), 2) +
-                    Math.pow(color.getGreen() - c.getGreen(), 2) +
-                    Math.pow(color.getBlue() - c.getBlue(), 2);
+            double distance = norme.distanceCouleur(color, c);
 
             if (distance < minDistance) {
                 minDistance = distance;

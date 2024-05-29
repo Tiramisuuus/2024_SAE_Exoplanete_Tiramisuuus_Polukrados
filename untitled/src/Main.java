@@ -17,10 +17,15 @@ public class Main {
         //ImageVertBleu imageVertBleu = new ImageVertBleu();
         //imageVertBleu.processImage("R.png");
 
+//        Color[] colors = {Color.GREEN, Color.YELLOW, Color.RED, Color.BLUE, Color.ORANGE};
+//        Palette palette = new Palette(colors);
+//        CouleurComparaison imageColorComparaison = new CouleurComparaison();
+//        imageColorComparaison.compareColors("R.png", palette);
+
         Color[] colors = {Color.GREEN, Color.YELLOW, Color.RED, Color.BLUE, Color.ORANGE};
         Palette palette = new Palette(colors);
-
+        NormeRedmean normeRedmean = new NormeRedmean();
         CouleurComparaison imageColorComparaison = new CouleurComparaison();
-        imageColorComparaison.compareColors("R.png", palette);
+        imageColorComparaison.compareColors("R.png", palette, normeRedmean);
     }
 }
